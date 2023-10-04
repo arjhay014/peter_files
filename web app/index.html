@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="module" src="./web3.js"></script>
+<style>
+  body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+ table.center {
+margin-left:auto;
+margin-right:auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+ 
+  .btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.free{color: green;}
+.freeto{color: dodgerblue;}
+.balance {color: orange;}
+    
+  
+</style>
+<title>Sample Website</title>
+</head>
+<body>
+  <div class="header">
+    <img class="logo" src="https://i.postimg.cc/B6ZN526x/logo.jpg" alt="Logo">
+    <h1>Welcome Blokcmates</h1>
+  </div>
+  <div class="container">
+    
+    <table class="center">
+      <tr>
+	  <td>Free Mint to Yourself</td>
+      <td><button class="btn free" onClick="freeMint()">Free Mint</button></td>
+     </tr>
+	 
+  <tr>
+   <td>Free Mint to Others</td>
+    <td><button class="btn freeto" onClick="freeMintTo()">Free Mint To</button> </td>
+      </tr>
+	 
+	 <tr>
+	  <td>Show your Balance</td>
+	   <td><button class="btn balance" onClick="balanceOf()">Get Balance</button></td>
+      </tr>
+
+      <!-- <tr>
+        <td>Add to White List</td>
+        <td><input type="text"</td>
+        <td><button class="btn balance" onClick="freeMint()">Add</button></td>
+      </tr> -->
+          
+      <form>
+        <tr>
+        <td>Add to White List</td>
+        <td><input type="text" id="list" /></td>
+        <td><input type="button" value="Add" onClick="freeMint()"></td>
+        <td><input type="reset" value="Reset""></td>
+      </tr>
+      </form>
+               </tbody>
+    </table>
+ 
+  </div>
+  
+  <script src="./functions.js"></script>
+</body>
+</html>
